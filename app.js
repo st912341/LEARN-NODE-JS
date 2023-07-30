@@ -1,7 +1,7 @@
 const http=require('http');
 const server=http.createServer((req, res)=>{
     res.setHeader('Content-Type', 'text/plain');
-    //res.write('sourabh tiwari')
+    res.write('sourabh tiwari')
     res.end();
 });
 const port=4000
