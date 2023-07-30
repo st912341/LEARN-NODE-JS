@@ -11,6 +11,10 @@ class student
     {
         console.log(this.name+" "+ this.roll);
     }
+    setplacementAge()
+    {
+        console.log("eligible");
+    }
 
 }
 
