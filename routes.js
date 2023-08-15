@@ -1,10 +1,11 @@
-const fs = require('fs');
+const fs=require('fs');
 
-const requestHandler = (req, res) => {
+const requestHandler= (req, res)=>{
     const url = req.url;
-    const method = req.method;
+    const method=req.method;
 
-    if (req.url === '/') {
+    if (req.url === '/') 
+    {
         res.setHeader("content-type", "text/html");
         fs.readFile('message.txt', { encoding: 'utf-8' }, (err, data) => {
             if (err) {
@@ -18,7 +19,8 @@ const requestHandler = (req, res) => {
             res.write("</html>");
             return res.end();
         });
-    } else if (url === '/message' && method === 'POST') {
+    } 
+    else if (url === '/message' && method === 'POST') {
         const body = [];
         req.on('data', (chunk) => {
             body.push(chunk);
@@ -45,6 +47,9 @@ const requestHandler = (req, res) => {
         res.write("</html>");
         res.end();
     }
-};
 
-module.exports = requestHandler;
+};
+module.exports=requestHandler;
+
+
+
